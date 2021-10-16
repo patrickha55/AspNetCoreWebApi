@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "i0d/dv0upYwVutoA1pwVam7188qutYME1RH8WwnHf+KgUSfmnnBR2LZq9eZ0vVrNZozw1TUQ0CK4riuE0iGqkw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Phat\\OneDrive\\CodingProjects\\dotNet\\CSharp\\WPF\\HotelListing\\HotelListing.Webapi\\HotelListing.Webapi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Phat\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\Phat\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Phat\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\Phat\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\Phat\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\Phat\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
