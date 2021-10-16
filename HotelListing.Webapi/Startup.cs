@@ -27,6 +27,16 @@ namespace HotelListing.Webapi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            
+            // Config Cross Origin Resource Sharing
+            services.AddCors(c =>
+            {
+                c.AddPolicy("AllowAll", builder =>
+                {
+                    builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+                });
+            });
+            
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "HotelListing.Webapi", Version = "v1"});
@@ -45,6 +55,8 @@ namespace HotelListing.Webapi
 
             app.UseHttpsRedirection();
 
+            app.UseCors("AllowAll");
+            
             app.UseRouting();
 
             app.UseAuthorization();
