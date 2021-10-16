@@ -1,11 +1,11 @@
-﻿using HotelListing.Data.Entities;
-using HotelListing.Data.ViewModels;
+﻿using HotelListing.Data.DTOs;
+using HotelListing.Data.Entities;
 
 namespace HotelListing.Data.Extensions
 {
     public static class CountryExtension
     {
-        public static CountryVM AsVM(this Country country) => new CountryVM
+        public static CountryDTO AsVM(this Country country) => new CountryDTO
         {
             Id = country.Id,
             Name = country.Name,

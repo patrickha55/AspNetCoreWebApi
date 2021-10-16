@@ -6,6 +6,9 @@ using Repository.IRepository;
 
 namespace Repository.Repository
 {
+    /// <summary>
+    /// This class is for saving changes to the db at once, rather than saving every time something change.
+    /// </summary>
     public class UnitOfWork : IUnitOfWork
     {
         private readonly ApplicationContext _context;
