@@ -18,12 +18,12 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Controllers" />
+      <ProjectReference Include="..\HotelListing.Data\HotelListing.Data.csproj" />
+      <ProjectReference Include="..\HotelListing.Utilities\HotelListing.Utilities.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\HotelListing.Data\HotelListing.Data.csproj" />
-      <ProjectReference Include="..\HotelListing.Utilities\HotelListing.Utilities.csproj" />
+      <Folder Include="Controllers" />
     </ItemGroup>
 
 </Project>

@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using HotelListing.Data;
+using HotelListing.Data.Configuration;
 using HotelListing.Utilities.ServiceExts;
-// using HotelListing.Utilities.ServiceExts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -38,6 +38,9 @@ namespace HotelListing.Webapi
             // Add db context
             services.AddDbContext<ApplicationContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("HotelHostingDB")));
+            
+            // Automapper
+            services.AddAutoMapper(typeof(MapperInitializer));
             
             services.AddSwaggerGen(c =>
             {
