@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelListing.Data", "HotelL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelListing.Utilities", "HotelListing.Utilities\HotelListing.Utilities.csproj", "{0053DE68-6FC7-42BA-9118-4F66323704EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{E955F652-639E-48FC-9F24-813B5EEE3B67}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{0053DE68-6FC7-42BA-9118-4F66323704EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0053DE68-6FC7-42BA-9118-4F66323704EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0053DE68-6FC7-42BA-9118-4F66323704EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E955F652-639E-48FC-9F24-813B5EEE3B67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E955F652-639E-48FC-9F24-813B5EEE3B67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E955F652-639E-48FC-9F24-813B5EEE3B67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E955F652-639E-48FC-9F24-813B5EEE3B67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
