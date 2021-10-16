@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelListing.Webapi", "HotelListing.Webapi\HotelListing.Webapi.csproj", "{43819C54-1AF8-455A-B46F-89D0A4A9C750}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelListing.Data", "HotelListing.Data\HotelListing.Data.csproj", "{01BF1818-5946-4103-8A1F-D3DA8BD24F0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelListing.Utilities", "HotelListing.Utilities\HotelListing.Utilities.csproj", "{0053DE68-6FC7-42BA-9118-4F66323704EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{43819C54-1AF8-455A-B46F-89D0A4A9C750}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43819C54-1AF8-455A-B46F-89D0A4A9C750}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43819C54-1AF8-455A-B46F-89D0A4A9C750}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01BF1818-5946-4103-8A1F-D3DA8BD24F0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01BF1818-5946-4103-8A1F-D3DA8BD24F0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01BF1818-5946-4103-8A1F-D3DA8BD24F0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01BF1818-5946-4103-8A1F-D3DA8BD24F0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0053DE68-6FC7-42BA-9118-4F66323704EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0053DE68-6FC7-42BA-9118-4F66323704EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0053DE68-6FC7-42BA-9118-4F66323704EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0053DE68-6FC7-42BA-9118-4F66323704EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
