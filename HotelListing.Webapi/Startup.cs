@@ -15,6 +15,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Repository.IRepository;
+using Repository.Repository;
 
 namespace HotelListing.Webapi
 {
@@ -30,7 +32,7 @@ namespace HotelListing.Webapi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson(o => o.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
             // Add cors
             services.ConfigureCors();
@@ -41,6 +43,9 @@ namespace HotelListing.Webapi
             
             // Automapper
             services.AddAutoMapper(typeof(MapperInitializer));
+            
+            // DI
+            services.AddTransient<IUnitOfWork, UnitOfWork>(); 
             
             services.AddSwaggerGen(c =>
             {
