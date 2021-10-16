@@ -2,10 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using HotelListing.Data;
+using HotelListing.Data.Configuration;
+using HotelListing.Utilities.ServiceExts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -27,15 +31,16 @@ namespace HotelListing.Webapi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            // Add cors
+            services.ConfigureCors();
+
+            // Add db context
+            services.AddDbContext<ApplicationContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("HotelHostingDB")));
             
-            // Config Cross Origin Resource Sharing
-            services.AddCors(c =>
-            {
-                c.AddPolicy("AllowAll", builder =>
-                {
-                    builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
-                });
-            });
+            // Automapper
+            services.AddAutoMapper(typeof(MapperInitializer));
             
             services.AddSwaggerGen(c =>
             {
@@ -55,7 +60,7 @@ namespace HotelListing.Webapi
 
             app.UseHttpsRedirection();
 
-            app.UseCors("AllowAll");
+            app.UseCors(ServiceExtensions.AllowAll);
             
             app.UseRouting();
 
