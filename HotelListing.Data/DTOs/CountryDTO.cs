@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace HotelListing.Data.DTOs
 {
@@ -14,6 +15,7 @@ namespace HotelListing.Data.DTOs
     public class CountryDTO : ManageCountryDTO
     {
         public int Id { get; set; }
+        public IList<HotelDTO> Hotels { get; set; }
     }
 
 }
