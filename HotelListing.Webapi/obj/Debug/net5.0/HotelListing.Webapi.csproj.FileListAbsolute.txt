@@ -139,7 +139,6 @@ C:\Users\Phat\OneDrive\CodingProjects\dotNet\CSharp\WPF\HotelListing\HotelListin
 C:\Users\Phat\OneDrive\CodingProjects\dotNet\CSharp\WPF\HotelListing\HotelListing.Webapi\obj\Debug\net5.0\staticwebassets\HotelListing.Webapi.StaticWebAssets.xml
 C:\Users\Phat\OneDrive\CodingProjects\dotNet\CSharp\WPF\HotelListing\HotelListing.Webapi\obj\Debug\net5.0\scopedcss\bundle\HotelListing.Webapi.styles.css
 C:\Users\Phat\OneDrive\CodingProjects\dotNet\CSharp\WPF\HotelListing\HotelListing.Webapi\obj\Debug\net5.0\HotelListing.Webapi.RazorTargetAssemblyInfo.cache
-C:\Users\Phat\OneDrive\CodingProjects\dotNet\CSharp\WPF\HotelListing\HotelListing.Webapi\obj\Debug\net5.0\HotelListing.Webapi.csproj.CopyComplete
 C:\Users\Phat\OneDrive\CodingProjects\dotNet\CSharp\WPF\HotelListing\HotelListing.Webapi\obj\Debug\net5.0\HotelListing.Webapi.dll
 C:\Users\Phat\OneDrive\CodingProjects\dotNet\CSharp\WPF\HotelListing\HotelListing.Webapi\obj\Debug\net5.0\ref\HotelListing.Webapi.dll
 C:\Users\Phat\OneDrive\CodingProjects\dotNet\CSharp\WPF\HotelListing\HotelListing.Webapi\obj\Debug\net5.0\HotelListing.Webapi.pdb

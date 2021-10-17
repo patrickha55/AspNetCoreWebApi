@@ -19,6 +19,6 @@ namespace HotelListing.Data.DTOs
     public class HotelDTO : ManageHotelDTO
     {
         public int Id { get; set; }
-        public CountryDTO CountryDTO { get; set; }
+        public CountryDTO Country { get; set; }
     }
 }
