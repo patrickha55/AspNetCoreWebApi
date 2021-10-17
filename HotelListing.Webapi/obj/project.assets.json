@@ -2252,10 +2252,7 @@
         },
         "runtime": {
           "bin/placeholder/HotelListing.Utilities.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       },
       "Repository/1.0.0": {
         "type": "project",

@@ -47,6 +47,10 @@ namespace HotelListing.Webapi
             // DI
             services.AddTransient<IUnitOfWork, UnitOfWork>(); 
             
+            // Add Identity
+            services.AddAuthentication();
+            services.ConfigureIdentity();
+            
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "HotelListing.Webapi", Version = "v1"});
