@@ -119,7 +119,11 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\diepv\\source\\repos\\ProjectAspNet\\HotelListing-ANWApi\\HotelListing.Data\\HotelListing.Data.csproj": {
+                "projectPath": "C:\\Users\\diepv\\source\\repos\\ProjectAspNet\\HotelListing-ANWApi\\HotelListing.Data\\HotelListing.Data.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
