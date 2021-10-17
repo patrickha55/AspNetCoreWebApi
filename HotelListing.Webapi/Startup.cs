@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using HotelListing.Data;
+using HotelListing.Data.Configuration;
 using HotelListing.Utilities.ServiceExts;
-// using HotelListing.Utilities.ServiceExts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -15,6 +15,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Repository.IRepository;
+using Repository.Repository;
 
 namespace HotelListing.Webapi
 {
@@ -30,7 +32,7 @@ namespace HotelListing.Webapi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson(o => o.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
             // Add cors
             services.ConfigureCors();
@@ -39,6 +41,12 @@ namespace HotelListing.Webapi
             services.AddDbContext<ApplicationContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("HotelHostingDB")));
             
+            // Automapper
+            services.AddAutoMapper(typeof(MapperInitializer));
+            
+            // DI
+            services.AddTransient<IUnitOfWork, UnitOfWork>(); 
+            
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "HotelListing.Webapi", Version = "v1"});
@@ -46,7 +54,7 @@ namespace HotelListing.Webapi
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
