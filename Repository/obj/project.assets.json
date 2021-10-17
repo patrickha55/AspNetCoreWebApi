@@ -5789,23 +5789,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Phat\\.nuget\\packages\\": {},
-    "E:\\Softwares\\shared-compnentsVSC2019\\NuGetPackages": {}
+    "C:\\Users\\diepv\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Phat\\OneDrive\\CodingProjects\\dotNet\\CSharp\\WPF\\HotelListing\\Repository\\Repository.csproj",
+      "projectUniqueName": "C:\\Users\\diepv\\source\\repos\\ProjectAspNet\\HotelListing-ANWApi\\Repository\\Repository.csproj",
       "projectName": "Repository",
-      "projectPath": "C:\\Users\\Phat\\OneDrive\\CodingProjects\\dotNet\\CSharp\\WPF\\HotelListing\\Repository\\Repository.csproj",
-      "packagesPath": "C:\\Users\\Phat\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Phat\\OneDrive\\CodingProjects\\dotNet\\CSharp\\WPF\\HotelListing\\Repository\\obj\\",
+      "projectPath": "C:\\Users\\diepv\\source\\repos\\ProjectAspNet\\HotelListing-ANWApi\\Repository\\Repository.csproj",
+      "packagesPath": "C:\\Users\\diepv\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\diepv\\source\\repos\\ProjectAspNet\\HotelListing-ANWApi\\Repository\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "E:\\Softwares\\shared-compnentsVSC2019\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Phat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\diepv\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -5820,8 +5820,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Phat\\OneDrive\\CodingProjects\\dotNet\\CSharp\\WPF\\HotelListing\\HotelListing.Data\\HotelListing.Data.csproj": {
-              "projectPath": "C:\\Users\\Phat\\OneDrive\\CodingProjects\\dotNet\\CSharp\\WPF\\HotelListing\\HotelListing.Data\\HotelListing.Data.csproj"
+            "C:\\Users\\diepv\\source\\repos\\ProjectAspNet\\HotelListing-ANWApi\\HotelListing.Data\\HotelListing.Data.csproj": {
+              "projectPath": "C:\\Users\\diepv\\source\\repos\\ProjectAspNet\\HotelListing-ANWApi\\HotelListing.Data\\HotelListing.Data.csproj"
             }
           }
         }
@@ -5850,7 +5850,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
