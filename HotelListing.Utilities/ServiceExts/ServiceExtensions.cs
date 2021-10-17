@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using HotelListing.Data;
+using HotelListing.Data.Entities;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace HotelListing.Utilities.ServiceExts
 {
@@ -16,6 +19,17 @@ namespace HotelListing.Utilities.ServiceExts
                     builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
                 });
             });
+        }
+
+        public static void ConfigureIdentity(this IServiceCollection services)
+        {
+            var builder = services.AddIdentityCore<User>(o =>
+            {
+                o.Password.RequiredUniqueChars = 0;
+            });
+
+            builder = new IdentityBuilder(builder.UserType, typeof(IdentityRole), services);
+            builder.AddEntityFrameworkStores<ApplicationContext>().AddDefaultTokenProviders();
         }
     }
 }
