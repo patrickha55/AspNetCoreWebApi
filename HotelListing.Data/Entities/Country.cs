@@ -9,6 +9,6 @@ namespace HotelListing.Data.Entities
         public string Name { get; set; }
         public string ShortName { get; set; }
 
-        public virtual IEnumerable<Hotel> Hotels { get; set; }
+        public virtual IList<Hotel> Hotels { get; set; }
     }
 }
