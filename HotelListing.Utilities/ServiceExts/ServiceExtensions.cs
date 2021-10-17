@@ -26,6 +26,7 @@ namespace HotelListing.Utilities.ServiceExts
             var builder = services.AddIdentityCore<User>(o =>
             {
                 o.Password.RequiredUniqueChars = 0;
+                o.Password.RequireNonAlphanumeric = false;
             });
 
             builder = new IdentityBuilder(builder.UserType, typeof(IdentityRole), services);
