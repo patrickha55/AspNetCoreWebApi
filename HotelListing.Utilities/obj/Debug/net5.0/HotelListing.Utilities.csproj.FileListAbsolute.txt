@@ -22,3 +22,6 @@ C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Utili
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Utilities\obj\Debug\net5.0\HotelListing.Utilities.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Utilities\obj\Debug\net5.0\ref\HotelListing.Utilities.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Utilities\obj\Debug\net5.0\HotelListing.Utilities.pdb
+C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Utilities\bin\Debug\net5.0\HotelListing.Data.dll
+C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Utilities\bin\Debug\net5.0\HotelListing.Data.pdb
+C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Utilities\obj\Debug\net5.0\HotelListing.Utilities.csproj.CopyComplete
