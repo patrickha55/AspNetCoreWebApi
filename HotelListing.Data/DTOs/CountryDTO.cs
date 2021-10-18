@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace HotelListing.Data.DTOs
 {
-    public class ManageCountryDTO
+    public class CreateCountryDTO
     {
         [Required]
         [StringLength(maximumLength:50,ErrorMessage = "Country name must be under 50 characters.")]
@@ -12,10 +12,15 @@ namespace HotelListing.Data.DTOs
         [StringLength(maximumLength:4,ErrorMessage = "Short country name must be under 4 characters.")]
         public string ShortName { get; set; }
     }
-    public class CountryDTO : ManageCountryDTO
+    public class CountryDTO : CreateCountryDTO
     {
         public int Id { get; set; }
         public IList<HotelDTO> Hotels { get; set; }
+    }
+
+    public class UpdateCountryDTO : CreateCountryDTO
+    {
+        public IList<int> HotelIds { get; set; }
     }
 
 }

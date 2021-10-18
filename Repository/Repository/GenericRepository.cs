@@ -73,14 +73,14 @@ namespace Repository.Repository
             return await query.AsNoTracking().FirstOrDefaultAsync(expression);
         }
 
-        public async Task Insert(T viewModel)
+        public async Task Insert(T entity)
         {
-            await _db.AddAsync(viewModel);
+            await _db.AddAsync(entity);
         }
 
-        public async Task InsertRange(IEnumerable<T> viewModels)
+        public async Task InsertRange(IEnumerable<T> entities)
         {
-            await _db.AddRangeAsync(viewModels);
+            await _db.AddRangeAsync(entities);
         }
 
         public async Task Delete(int id)
@@ -90,19 +90,19 @@ namespace Repository.Repository
             _db.Remove(entity);
         }
 
-        public void DeleteRange(IEnumerable<T> viewModels)
+        public void DeleteRange(IEnumerable<T> entities)
         {
-            _db.RemoveRange(viewModels);
+            _db.RemoveRange(entities);
         }
 
         /// <summary>
         /// This method receive an object and tell ef to look up the any data in the db for changing
         /// </summary>
-        /// <param name="viewModel">Object to update</param>
-        public void Update(T viewModel)
+        /// <param name="entity">Object to update</param>
+        public void Update(T entity)
         {
-            _db.Attach(viewModel);
-            _context.Entry(viewModel).State = EntityState.Modified;
+            _db.Attach(entity);
+            _context.Entry(entity).State = EntityState.Modified;
         }
     }
 }
