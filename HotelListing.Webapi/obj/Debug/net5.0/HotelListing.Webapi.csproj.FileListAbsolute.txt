@@ -294,3 +294,6 @@ C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webap
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\obj\Debug\net5.0\ref\HotelListing.Webapi.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\obj\Debug\net5.0\HotelListing.Webapi.pdb
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\obj\Debug\net5.0\HotelListing.Webapi.genruntimeconfig.cache
+C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Services.dll
+C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Services.pdb
