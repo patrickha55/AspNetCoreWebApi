@@ -27,6 +27,7 @@ namespace Services.AuthWithJWT
 
         public async Task<bool> ValidateUserAsync(SignInDTO request)
         {
+            if (request is null) throw new NullReferenceException($"SignInDTO is null in {nameof(ValidateUserAsync)}.");
             _user = await _userManager.FindByNameAsync(request.Email);
             var validPassword = await _userManager.CheckPasswordAsync(_user, request.Password);
             return (_user is not null && validPassword);
@@ -44,14 +45,17 @@ namespace Services.AuthWithJWT
         private SigningCredentials GetSigningCredentials()
         {
             var key = Environment.GetEnvironmentVariable("KEY");
+            if (key == null) throw new NullReferenceException($"Environment variable KEY is null in {nameof(GetSigningCredentials)}.");
+            
             var secret = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key));
 
             return new SigningCredentials(secret, SecurityAlgorithms.HmacSha256);
+
         }
         
         private async Task<List<Claim>> GetClaimsAsync()
         {
-            if (_user is null) return null;
+            if (_user is null) throw new NullReferenceException($"User object is null in {nameof(GetClaimsAsync)}.");
             
             var claims = new List<Claim>
             {
