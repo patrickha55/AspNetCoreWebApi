@@ -17,6 +17,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Repository.IRepository;
 using Repository.Repository;
+using Services.AuthWithJWT;
 
 namespace HotelListing.Webapi
 {
@@ -45,11 +46,13 @@ namespace HotelListing.Webapi
             services.AddAutoMapper(typeof(MapperInitializer));
             
             // DI
-            services.AddTransient<IUnitOfWork, UnitOfWork>(); 
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IAuthManager, AuthManager>();
             
             // Add Identity
             services.AddAuthentication();
             services.ConfigureIdentity();
+            services.ConfigureJwt(Configuration);
             
             services.AddSwaggerGen(c =>
             {

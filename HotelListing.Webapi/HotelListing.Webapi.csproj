@@ -22,6 +22,7 @@
       <ProjectReference Include="..\HotelListing.Data\HotelListing.Data.csproj" />
       <ProjectReference Include="..\HotelListing.Utilities\HotelListing.Utilities.csproj" />
       <ProjectReference Include="..\Repository\Repository.csproj" />
+      <ProjectReference Include="..\Services\Services.csproj" />
     </ItemGroup>
 
 </Project>
