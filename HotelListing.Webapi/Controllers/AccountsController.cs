@@ -51,8 +51,6 @@ namespace HotelListing.Webapi.Controllers
                     UserName = request.Email
                 };
                 
-                user.UserName = request.Email;
-                
                 var result = await _userManager.CreateAsync(user,password: request.Password);
                     
                 return result.Succeeded ? NoContent() : BadRequest("User registration attempt failed.");
