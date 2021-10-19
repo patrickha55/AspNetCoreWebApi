@@ -1,9 +1,11 @@
-﻿using System;
+﻿using HotelListing.Data.DTOs;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
+using X.PagedList;
 
 namespace Repository.IRepository
 {
@@ -21,6 +23,19 @@ namespace Repository.IRepository
             Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
             List<string> includes = null
         );
+        
+        /// <summary>
+        /// This get method allow you to get information base on the page size, page number and if you want to include any additional data with it.
+        /// </summary>
+        /// <param name="includes">Include any aditional data - Optional</param>
+        /// <param name="request">Request page size and page numeber - Optional</param>
+        /// <returns>A list of objects</returns>
+        Task<IPagedList<T>> GetAll(
+            RequestParams request,
+            List<string> includes = null
+        );
+
+
         /// <summary>
         /// This get method allow you to get information base on what type of expression you choose and if you want to include any additional data with it.
         /// </summary>

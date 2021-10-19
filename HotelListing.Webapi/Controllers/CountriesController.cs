@@ -33,11 +33,11 @@ namespace HotelListing.Webapi.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<ActionResult<IEnumerable<CountryDTO>>> GetCountries()
+        public async Task<ActionResult<IEnumerable<CountryDTO>>> GetCountries([FromQuery] RequestParams request)
         {
             try
             {
-                var countries = await _unitOfWork.Countries.GetAll();
+                var countries = await _unitOfWork.Countries.GetAll(request);
 
                 if (countries is null) return NotFound();
 

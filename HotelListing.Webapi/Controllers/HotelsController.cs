@@ -33,11 +33,11 @@ namespace HotelListing.Webapi.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<ActionResult<IEnumerable<HotelDTO>>> GetHotels()
+        public async Task<ActionResult<IEnumerable<HotelDTO>>> GetHotels([FromQuery] RequestParams request)
         {
             try
             {
-                var hotels = await _unitOfWork.Hotels.GetAll();
+                var hotels = await _unitOfWork.Hotels.GetAll(request);
                 if (hotels is null) return NotFound();
 
                 var result = _mapper.Map<List<HotelDTO>>(hotels);

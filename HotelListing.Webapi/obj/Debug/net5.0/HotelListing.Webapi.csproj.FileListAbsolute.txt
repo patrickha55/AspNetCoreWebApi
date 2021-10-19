@@ -297,3 +297,6 @@ C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webap
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Services.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Services.pdb
+C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\JetBrains.Annotations.dll
+C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\X.PagedList.dll
+C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\X.PagedList.Mvc.Core.dll
