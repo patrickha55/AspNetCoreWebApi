@@ -13,7 +13,7 @@ using Microsoft.Extensions.Logging;
 using Repository.IRepository;
 
 namespace HotelListing.Webapi.Controllers
-{
+{ 
     [Route("api/[controller]")] // Attribute base routing
     [ApiController]
     public class CountriesController : ControllerBase
@@ -35,21 +35,19 @@ namespace HotelListing.Webapi.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<IEnumerable<CountryDTO>>> GetCountries([FromQuery] RequestParams request)
         {
-            try
+            if (request.PageNumber < 1 || request.PageSize < 1)
             {
-                var countries = await _unitOfWork.Countries.GetAll(request);
-
-                if (countries is null) return NotFound();
-
-                var result = _mapper.Map<List<CountryDTO>>(countries);
-
-                return Ok(result);
+                _logger.LogError($"Invalid request in {nameof(GetCountries)}");
+                return BadRequest($"Invalid Page Size or Page Number. Please try again.");
             }
-            catch (Exception e)
-            {
-                _logger.LogError(exception: e, $"Something went wrong in the {nameof(GetCountries)} method in the CountriesController.");
-                return StatusCode(500, "Internal Server Error. Please try again later.");
-            }
+
+            var countries = await _unitOfWork.Countries.GetAll(request);
+
+            if (countries is null) return NotFound("There are no countries in the db yet or something went wrong!");
+
+            var result = _mapper.Map<List<CountryDTO>>(countries);
+
+            return Ok(result);
         }
 
         [HttpGet("{id:int}")]
@@ -58,21 +56,15 @@ namespace HotelListing.Webapi.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<CountryDTO>> GetCountry(int id)
         {
-            try
-            {
-                var country = await _unitOfWork.Countries.Get(c => c.Id == id, new List<string> { "Hotels" });
+            if (id < 1) return BadRequest($"Invalid country id. Please try again.");
 
-                if (country is null) return NotFound();
+            var country = await _unitOfWork.Countries.Get(c => c.Id == id, new List<string> { "Hotels" });
 
-                var result = _mapper.Map<CountryDTO>(country);
+            if (country is null) return NotFound();
 
-                return Ok(result);
-            }
-            catch (Exception e)
-            {
-                _logger.LogError(exception: e, $"Something went wrong in the {nameof(GetCountry)} method in the CountriesController.");
-                return StatusCode(500, "Internal Server Error. Please try again later.");
-            }
+            var result = _mapper.Map<CountryDTO>(country);
+
+            return Ok(result);
         }
 
         [Authorize(Roles = "Admin")]
@@ -88,22 +80,14 @@ namespace HotelListing.Webapi.Controllers
                 return BadRequest(ModelState);
             }
 
-            try
-            {
-                var country = _mapper.Map<Country>(request);
+            var country = _mapper.Map<Country>(request);
 
-                await _unitOfWork.Countries.Insert(country);
-                await _unitOfWork.Save();
+            await _unitOfWork.Countries.Insert(country);
+            await _unitOfWork.Save();
 
-                var countryDTO = _mapper.Map<CountryDTO>(country);
+            var countryDTO = _mapper.Map<CountryDTO>(country);
 
-                return CreatedAtAction(nameof(GetCountry), new { id = countryDTO.Id }, countryDTO);
-            }
-            catch (Exception e)
-            {
-                _logger.LogError(exception: e, $"Something went wrong in the {nameof(Post)} method in the CountriesController.");
-                return StatusCode(500, "Internal Server Error. Please try again later.");
-            }
+            return CreatedAtAction(nameof(GetCountry), new { id = countryDTO.Id }, countryDTO);
         }
 
         [Authorize(Roles = "Admin")]
@@ -120,28 +104,20 @@ namespace HotelListing.Webapi.Controllers
                 return BadRequest(ModelState);
             }
 
-            try
+            var country = await _unitOfWork.Countries.Get(h => h.Id == id, new List<string> { "Hotels" });
+
+            if (country is null)
             {
-                var country = await _unitOfWork.Countries.Get(h => h.Id == id, new List<string> { "Hotels" });
-
-                if (country is null)
-                {
-                    _logger.LogError($"Invalid PUT attempt in {nameof(Put)}");
-                    return NotFound("Hotel with the provided id does not exist.");
-                }
-
-                var hotel = _mapper.Map(request, country);
-
-                _unitOfWork.Countries.Update(country);
-                await _unitOfWork.Save();
-
-                return NoContent();
+                _logger.LogError($"Invalid PUT attempt in {nameof(Put)}");
+                return NotFound("Hotel with the provided id does not exist.");
             }
-            catch (Exception e)
-            {
-                _logger.LogError(e, $"Something went wrong in the {nameof(Put)} method in the CountriesController.");
-                return StatusCode(500, "Internal sever error. Please try again later.");
-            }
+
+            var hotel = _mapper.Map(request, country);
+
+            _unitOfWork.Countries.Update(country);
+            await _unitOfWork.Save();
+
+            return NoContent();
         }
 
         [Authorize(Roles = "Admin")]
@@ -158,26 +134,18 @@ namespace HotelListing.Webapi.Controllers
                 return BadRequest($"Invalid ID provided.");
             }
 
-            try
+            var country = await _unitOfWork.Countries.Get(h => h.Id == id);
+
+            if (country is null)
             {
-                var country = await _unitOfWork.Countries.Get(h => h.Id == id);
-
-                if (country is null)
-                {
-                    _logger.LogError($"Invalid Delete attempt in {nameof(Delete)}");
-                    return NotFound("Hotel with the provided id does not exist.");
-                }
-
-                await _unitOfWork.Countries.Delete(id);
-                await _unitOfWork.Save();
-
-                return NoContent();
+                _logger.LogError($"Invalid Delete attempt in {nameof(Delete)}");
+                return NotFound("Hotel with the provided id does not exist.");
             }
-            catch (Exception e)
-            {
-                _logger.LogError(e, $"Something went wrong in the {nameof(Delete)} method in the CountriesController.");
-                return StatusCode(500, "Internal sever error. Please try again later.");
-            }
+
+            await _unitOfWork.Countries.Delete(id);
+            await _unitOfWork.Save();
+
+            return NoContent();
         }
     }
 }

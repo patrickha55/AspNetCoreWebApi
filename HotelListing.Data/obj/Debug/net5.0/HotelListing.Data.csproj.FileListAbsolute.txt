@@ -19,7 +19,6 @@ C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Data\
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Data\bin\Debug\net5.0\HotelListing.Data.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Data\bin\Debug\net5.0\ref\HotelListing.Data.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Data\bin\Debug\net5.0\HotelListing.Data.pdb
-C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Data\obj\Debug\net5.0\HotelListing.Data.csproj.AssemblyReference.cache
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Data\obj\Debug\net5.0\HotelListing.Data.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Data\obj\Debug\net5.0\HotelListing.Data.AssemblyInfoInputs.cache
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Data\obj\Debug\net5.0\HotelListing.Data.AssemblyInfo.cs
@@ -28,3 +27,4 @@ C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Data\
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Data\obj\Debug\net5.0\ref\HotelListing.Data.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Data\obj\Debug\net5.0\HotelListing.Data.pdb
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Data\obj\Debug\net5.0\HotelListing.Data.genruntimeconfig.cache
+C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Data\obj\Debug\net5.0\HotelListing.Data.csproj.AssemblyReference.cache
