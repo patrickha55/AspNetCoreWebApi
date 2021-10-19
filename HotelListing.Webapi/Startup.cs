@@ -53,6 +53,10 @@ namespace HotelListing.Webapi
             services.AddAuthentication();
             services.ConfigureIdentity();
             services.ConfigureJwt(Configuration);
+
+            // Add Api Versioning
+            services.ConfigureVersioning();
+
             
             services.AddSwaggerGen(c =>
             {
@@ -69,6 +73,9 @@ namespace HotelListing.Webapi
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "HotelListing.Webapi v1"));
             }
+
+            // Add Global Error Handling
+            app.ConfigureExceptionHandler();
 
             app.UseHttpsRedirection();
 
