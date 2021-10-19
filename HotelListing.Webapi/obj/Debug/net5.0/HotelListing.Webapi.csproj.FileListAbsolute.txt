@@ -155,6 +155,8 @@ C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webap
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\AutoMapper.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Humanizer.dll
+C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\JetBrains.Annotations.dll
+C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
@@ -206,6 +208,8 @@ C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webap
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\System.Runtime.Caching.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\X.PagedList.dll
+C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\X.PagedList.Mvc.Core.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\de\Microsoft.CodeAnalysis.resources.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\es\Microsoft.CodeAnalysis.resources.dll
@@ -275,9 +279,11 @@ C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webap
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\HotelListing.Data.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\HotelListing.Utilities.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Repository.dll
+C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Services.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\HotelListing.Data.pdb
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\HotelListing.Utilities.pdb
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Repository.pdb
+C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Services.pdb
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\obj\Debug\net5.0\HotelListing.Webapi.csproj.AssemblyReference.cache
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\obj\Debug\net5.0\HotelListing.Webapi.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\obj\Debug\net5.0\HotelListing.Webapi.AssemblyInfoInputs.cache
@@ -294,9 +300,5 @@ C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webap
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\obj\Debug\net5.0\ref\HotelListing.Webapi.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\obj\Debug\net5.0\HotelListing.Webapi.pdb
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\obj\Debug\net5.0\HotelListing.Webapi.genruntimeconfig.cache
-C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Services.dll
-C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Services.pdb
-C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\JetBrains.Annotations.dll
-C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\X.PagedList.dll
-C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\X.PagedList.Mvc.Core.dll
+C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Serilog.dll
+C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.Versioning.dll
