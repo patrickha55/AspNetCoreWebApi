@@ -152,16 +152,19 @@ C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webap
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\HotelListing.Webapi.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\ref\HotelListing.Webapi.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\HotelListing.Webapi.pdb
+C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\AspNetCoreRateLimit.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\AutoMapper.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Humanizer.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\JetBrains.Annotations.dll
+C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Marvin.Cache.Headers.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.Versioning.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Microsoft.CodeAnalysis.dll
@@ -195,6 +198,7 @@ C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webap
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Serilog.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -300,6 +304,3 @@ C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webap
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\obj\Debug\net5.0\ref\HotelListing.Webapi.dll
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\obj\Debug\net5.0\HotelListing.Webapi.pdb
 C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\obj\Debug\net5.0\HotelListing.Webapi.genruntimeconfig.cache
-C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Serilog.dll
-C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.Versioning.dll
-C:\Users\diepv\source\repos\ProjectAspNet\HotelListing-ANWApi\HotelListing.Webapi\bin\Debug\net5.0\Marvin.Cache.Headers.dll
