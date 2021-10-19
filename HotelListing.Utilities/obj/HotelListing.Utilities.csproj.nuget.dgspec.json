@@ -136,6 +136,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "AspNetCoreRateLimit": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
             "Marvin.Cache.Headers": {
               "target": "Package",
               "version": "[5.0.1, )"

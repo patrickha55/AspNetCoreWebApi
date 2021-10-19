@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text;
+using AspNetCoreRateLimit;
 using HotelListing.Data;
 using HotelListing.Data.DTOs;
 using HotelListing.Data.Entities;
@@ -11,7 +13,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
-using Microsoft.AspNetCore.Routing.Template;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
@@ -118,6 +119,27 @@ namespace HotelListing.Utilities.ServiceExts
                     validationOpt.MustRevalidate = true;
                 }
             );
+        }
+
+        public static void ConfigureRateLimit(this IServiceCollection services)
+        {
+            var rateLimitRules = new List<RateLimitRule>
+            {
+                new RateLimitRule
+                {
+                    Endpoint = "*",
+                    Limit= 1,
+                    Period = "5s"
+                }
+            };
+            services.Configure<IpRateLimitOptions>(opt =>
+            {
+                opt.GeneralRules = rateLimitRules;
+            });
+            services.AddSingleton<IProcessingStrategy, AsyncKeyLockProcessingStrategy>();
+            services.AddSingleton<IRateLimitCounterStore, MemoryCacheRateLimitCounterStore>();
+            services.AddSingleton<IIpPolicyStore, MemoryCacheIpPolicyStore>();
+            services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
         }
     }
 }

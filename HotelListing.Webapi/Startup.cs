@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AspNetCoreRateLimit;
 using HotelListing.Data;
 using HotelListing.Data.Configuration;
 using HotelListing.Utilities.ServiceExts;
@@ -37,6 +38,12 @@ namespace HotelListing.Webapi
             services.AddDbContext<ApplicationContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("HotelHostingDB")));
 
+            // Rate Limit
+            services.AddMemoryCache();
+
+            services.ConfigureRateLimit();
+            services.AddHttpContextAccessor();
+
             // Response Caching
             services.ConfigureHttpCacheHeaders();
 
@@ -52,6 +59,7 @@ namespace HotelListing.Webapi
             // DI
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IAuthManager, AuthManager>();
+
             
             // Add Identity
             services.AddAuthentication();
@@ -88,6 +96,9 @@ namespace HotelListing.Webapi
             // Response Caching
             app.UseResponseCaching();
             app.UseHttpCacheHeaders();
+
+            // Rate Limit
+            app.UseIpRateLimiting();
             app.UseRouting();
 
             app.UseAuthentication();
