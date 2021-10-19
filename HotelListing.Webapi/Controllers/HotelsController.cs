@@ -35,20 +35,18 @@ namespace HotelListing.Webapi.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<IEnumerable<HotelDTO>>> GetHotels([FromQuery] RequestParams request)
         {
-            try
+            if (request.PageNumber < 1 || request.PageSize < 1)
             {
-                var hotels = await _unitOfWork.Hotels.GetAll(request);
-                if (hotels is null) return NotFound();
-
-                var result = _mapper.Map<List<HotelDTO>>(hotels);
-
-                return Ok(result);
+                _logger.LogError($"Invalid request in {nameof(GetHotels)}");
+                return BadRequest($"Invalid Page Size or Page Number. Please try again.");
             }
-            catch (Exception e)
-            {
-                _logger.LogError(e, $"Something went wrong in the {nameof(GetHotels)} method in the HotelsController.");
-                return StatusCode(500, "Internal sever error. Please try again later.");
-            }
+
+            var hotels = await _unitOfWork.Hotels.GetAll(request);
+            if (hotels is null) return NotFound();
+
+            var result = _mapper.Map<List<HotelDTO>>(hotels);
+
+            return Ok(result);
         }
 
         [HttpGet("{id:int}")]
@@ -58,20 +56,14 @@ namespace HotelListing.Webapi.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<HotelDTO>> GetHotel(int id)
         {
-            try
-            {
-                var hotel = await _unitOfWork.Hotels.Get(h => h.Id == id, new List<string> { "Country" });
-                if (hotel is null) return NotFound();
+            if (id < 1) return BadRequest($"Invalid hotel id. Please try again.");
 
-                var result = _mapper.Map<HotelDTO>(hotel);
+            var hotel = await _unitOfWork.Hotels.Get(h => h.Id == id, new List<string> { "Country" });
+            if (hotel is null) return NotFound();
 
-                return Ok(result);
-            }
-            catch (Exception e)
-            {
-                _logger.LogError(e, $"Something went wrong in the {nameof(GetHotel)} method in the HotelsController.");
-                return StatusCode(500, "Internal sever error. Please try again later.");
-            }
+            var result = _mapper.Map<HotelDTO>(hotel);
+
+            return Ok(result);
         }
 
         [Authorize(Roles = "Admin")]
@@ -87,21 +79,13 @@ namespace HotelListing.Webapi.Controllers
                 return BadRequest(ModelState);
             }
 
-            try
-            {
-                var hotel = _mapper.Map<Hotel>(request);
-                await _unitOfWork.Hotels.Insert(hotel);
-                await _unitOfWork.Save();
+            var hotel = _mapper.Map<Hotel>(request);
+            await _unitOfWork.Hotels.Insert(hotel);
+            await _unitOfWork.Save();
 
-                var hotelDTO = _mapper.Map<HotelDTO>(hotel);
+            var hotelDTO = _mapper.Map<HotelDTO>(hotel);
 
-                return CreatedAtAction(nameof(GetHotel), new { id = hotel.Id }, hotelDTO);
-            }
-            catch (Exception e)
-            {
-                _logger.LogError(e, $"Something went wrong in the {nameof(Post)} method in the HotelsController.");
-                return StatusCode(500, "Internal sever error. Please try again later.");
-            }
+            return CreatedAtAction(nameof(GetHotel), new { id = hotel.Id }, hotelDTO);
         }
 
         [Authorize(Roles = "Admin")]
@@ -110,7 +94,7 @@ namespace HotelListing.Webapi.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<ActionResult> Put(int id ,[FromBody] ManageHotelDTO request)
+        public async Task<ActionResult> Put(int id, [FromBody] ManageHotelDTO request)
         {
             if (!ModelState.IsValid && id < 1)
             {
@@ -118,28 +102,20 @@ namespace HotelListing.Webapi.Controllers
                 return BadRequest(ModelState);
             }
 
-            try
+            var hotel = await _unitOfWork.Hotels.Get(h => h.Id == id);
+
+            if (hotel is null)
             {
-                var hotel = await _unitOfWork.Hotels.Get(h => h.Id == id);
-
-                if (hotel is null)
-                {
-                    _logger.LogError($"Invalid PUT attempt in {nameof(Put)}");
-                    return NotFound("Hotel with the provided id does not exist.");
-                }
-
-                _mapper.Map(request, hotel);
-
-                _unitOfWork.Hotels.Update(hotel);
-                await _unitOfWork.Save();
-
-                return NoContent();
+                _logger.LogError($"Invalid PUT attempt in {nameof(Put)}");
+                return NotFound("Hotel with the provided id does not exist.");
             }
-            catch (Exception e)
-            {
-                _logger.LogError(e, $"Something went wrong in the {nameof(Put)} method in the HotelsController.");
-                return StatusCode(500, "Internal sever error. Please try again later.");
-            }
+
+            _mapper.Map(request, hotel);
+
+            _unitOfWork.Hotels.Update(hotel);
+            await _unitOfWork.Save();
+
+            return NoContent();
         }
 
         [Authorize(Roles = "Admin")]
@@ -150,32 +126,24 @@ namespace HotelListing.Webapi.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult> Delete(int id)
         {
-            if(id < 1)
+            if (id < 1)
             {
                 _logger.LogError($"Invalid DELETE attempt in {nameof(Delete)}.");
                 return BadRequest($"Invalid ID provided.");
             }
 
-            try
+            var hotel = await _unitOfWork.Hotels.Get(h => h.Id == id);
+
+            if (hotel is null)
             {
-                var hotel = await _unitOfWork.Hotels.Get(h => h.Id == id);
-
-                if (hotel is null)
-                {
-                    _logger.LogError($"Invalid Delete attempt in {nameof(Delete)}");
-                    return NotFound("Hotel with the provided id does not exist.");
-                }
-
-                await _unitOfWork.Hotels.Delete(id);
-                await _unitOfWork.Save();
-
-                return NoContent();
+                _logger.LogError($"Invalid Delete attempt in {nameof(Delete)}");
+                return NotFound("Hotel with the provided id does not exist.");
             }
-            catch (Exception e)
-            {
-                _logger.LogError(e, $"Something went wrong in the {nameof(Delete)} method in the HotelsController.");
-                return StatusCode(500, "Internal sever error. Please try again later.");
-            }
+
+            await _unitOfWork.Hotels.Delete(id);
+            await _unitOfWork.Save();
+
+            return NoContent();
         }
     }
 }
