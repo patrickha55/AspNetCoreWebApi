@@ -33,14 +33,18 @@ namespace HotelListing.Webapi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Add db context
+            services.AddDbContext<ApplicationContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("HotelHostingDB")));
+
+            // Response Caching
+            services.ConfigureHttpCacheHeaders();
+
             services.AddControllers().AddNewtonsoftJson(o => o.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
             // Add cors
             services.ConfigureCors();
 
-            // Add db context
-            services.AddDbContext<ApplicationContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("HotelHostingDB")));
             
             // Automapper
             services.AddAutoMapper(typeof(MapperInitializer));
@@ -80,7 +84,10 @@ namespace HotelListing.Webapi
             app.UseHttpsRedirection();
 
             app.UseCors(ServiceExtensions.AllowAll);
-            
+
+            // Response Caching
+            app.UseResponseCaching();
+            app.UseHttpCacheHeaders();
             app.UseRouting();
 
             app.UseAuthentication();

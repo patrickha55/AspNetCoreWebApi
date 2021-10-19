@@ -13,7 +13,7 @@ using Microsoft.Extensions.Logging;
 using Repository.IRepository;
 
 namespace HotelListing.Webapi.Controllers
-{
+{ 
     [Route("api/[controller]")] // Attribute base routing
     [ApiController]
     public class CountriesController : ControllerBase
