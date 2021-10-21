@@ -1,14 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelListing.Webapi", "HotelListing.Webapi\HotelListing.Webapi.csproj", "{43819C54-1AF8-455A-B46F-89D0A4A9C750}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelListing.Webapi", "HotelListing.Webapi\HotelListing.Webapi.csproj", "{43819C54-1AF8-455A-B46F-89D0A4A9C750}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelListing.Data", "HotelListing.Data\HotelListing.Data.csproj", "{01BF1818-5946-4103-8A1F-D3DA8BD24F0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelListing.Data", "HotelListing.Data\HotelListing.Data.csproj", "{01BF1818-5946-4103-8A1F-D3DA8BD24F0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelListing.Utilities", "HotelListing.Utilities\HotelListing.Utilities.csproj", "{0053DE68-6FC7-42BA-9118-4F66323704EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelListing.Utilities", "HotelListing.Utilities\HotelListing.Utilities.csproj", "{0053DE68-6FC7-42BA-9118-4F66323704EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{E955F652-639E-48FC-9F24-813B5EEE3B67}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repository\Repository.csproj", "{E955F652-639E-48FC-9F24-813B5EEE3B67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{5AF93CF2-4162-43EF-B7E1-DE02979CCE36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{5AF93CF2-4162-43EF-B7E1-DE02979CCE36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelListing.Tests", "HotelListing.Tests\HotelListing.Tests.csproj", "{FE8D3802-A4BE-48CD-83BA-35A17F0347A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,5 +41,15 @@ Global
 		{5AF93CF2-4162-43EF-B7E1-DE02979CCE36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AF93CF2-4162-43EF-B7E1-DE02979CCE36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AF93CF2-4162-43EF-B7E1-DE02979CCE36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE8D3802-A4BE-48CD-83BA-35A17F0347A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE8D3802-A4BE-48CD-83BA-35A17F0347A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE8D3802-A4BE-48CD-83BA-35A17F0347A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE8D3802-A4BE-48CD-83BA-35A17F0347A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7693232B-3AC6-4097-B156-164FEC373144}
 	EndGlobalSection
 EndGlobal
